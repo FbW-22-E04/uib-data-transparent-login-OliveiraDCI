@@ -13,8 +13,18 @@
       }
 
       body {
-        background-color: #333;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .page-container {
+        width: 100vw;
+        height: 100vh;
+        background-image: radial-gradient(
+            rgba(145, 146, 122, 0.6),
+            rgba(217, 91, 132, 0.3)
+          ),
+          url("/img/pexels-felix-mittermeier-956981.jpg");
+        background-size: cover;
       }
 
       .form-container {
@@ -22,6 +32,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 30%;
       }
 
       .block {
@@ -34,8 +45,9 @@
       }
 
       ::placeholder {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.432);
         font-weight: 700;
+        padding-left: 1em;
       }
 
       .title,
@@ -44,32 +56,49 @@
       }
 
       .title {
-        border-bottom: 3px solid greenyellow;
-        padding: 0.2em;
-        margin-bottom: 1em;
+        padding: 0.2em 0;
+        margin: 1em 0;
+        border-bottom: 6px solid rgba(172, 255, 47, 0.685);
+      }
+
+      .input {
+        padding: 0.2em 0;
+        margin: 1.5em 0;
+        border-bottom: 1px solid rgba(172, 255, 47, 0.712);
+      }
+
+      .btn {
+        cursor: pointer;
+        padding: 0.5em 0;
+        margin: 3em 0;
+        border: 3px solid rgba(172, 255, 47, 0.781);
+        border-radius: 5px;
+        font-weight: 700;
       }
     </style>
   </head>
   <body>
-    <div class="form-container">
-      <form action="#">
-        <h1 class="block title">Login</h1>
-        <input
-          class="block"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="@ Your email..."
-        />
-        <input
-          class="block"
-          type="password"
-          name="password"
-          id="password"
-          placeholder=" Your password..."
-        />
-        <button class="block btn" type="submit">Sign In</button>
-      </form>
+    <div class="page-container">
+      <div class="form-container">
+        <form action="#">
+          <h1 class="block title">Login</h1>
+          <input
+            class="block input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder=" email"
+          />
+          <input
+            class="block input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder=" password"
+          />
+          <button class="block btn" type="submit">Sign In</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
