@@ -6,26 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <style>
-      body {
-        background-image: url(#);
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
+
+      body {
+        background-color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
       .form-container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
+      .block {
+        display: block;
+        width: 100%;
+        color: #fff;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+
+      ::placeholder {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .title,
+      .btn {
+        text-align: center;
+      }
+
+      .title {
+        border-bottom: 3px solid greenyellow;
+        padding: 0.2em;
+        margin-bottom: 1em;
+      }
     </style>
   </head>
   <body>
     <div class="form-container">
       <form action="#">
-        <caption>
-          Login
-        </caption>
-        <input type="email" name="email" id="email" />
-        <input type="password" name="password" id="password" />
-        <button type="submit">Sign In</button>
+        <h1 class="block title">Login</h1>
+        <input
+          class="block"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="@ Your email..."
+        />
+        <input
+          class="block"
+          type="password"
+          name="password"
+          id="password"
+          placeholder=" Your password..."
+        />
+        <button class="block btn" type="submit">Sign In</button>
       </form>
     </div>
   </body>
