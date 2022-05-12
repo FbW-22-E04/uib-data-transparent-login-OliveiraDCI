@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0b17dd7967.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Login</title>
     <style>
       * {
@@ -20,8 +24,8 @@
         width: 100vw;
         height: 100vh;
         background-image: radial-gradient(
-            rgba(145, 146, 122, 0.6),
-            rgba(217, 91, 132, 0.3)
+            rgba(145, 146, 122, 0.5),
+            rgba(217, 91, 132, 0.2)
           ),
           url("/img/pexels-felix-mittermeier-956981.jpg");
         background-size: cover;
@@ -45,7 +49,7 @@
       }
 
       ::placeholder {
-        color: rgba(255, 255, 255, 0.432);
+        color: rgba(255, 255, 255, 0.692);
         font-weight: 700;
         padding-left: 1em;
       }
@@ -62,9 +66,10 @@
       }
 
       .input {
-        padding: 0.2em 0;
+        padding: 0.2em 2.5em;
         margin: 1.5em 0;
         border-bottom: 1px solid rgba(172, 255, 47, 0.712);
+        position: relative;
       }
 
       .btn {
@@ -74,6 +79,14 @@
         border: 3px solid rgba(172, 255, 47, 0.781);
         border-radius: 5px;
         font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .icon {
+        color: white;
+        position: absolute;
+        left: 1em;
+        font-size: 0.8rem;
       }
     </style>
   </head>
@@ -81,21 +94,32 @@
     <div class="page-container">
       <div class="form-container">
         <form action="#">
-          <h1 class="block title">Login</h1>
-          <input
-            class="block input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder=" email"
-          />
-          <input
-            class="block input"
-            type="password"
-            name="password"
-            id="password"
-            placeholder=" password"
-          />
+          <h1 class="block title">
+            <i class="fa-solid fa-envelope"></i> Login
+          </h1>
+          <div>
+            <div>
+              <i class="icon fa-solid fa-envelope"></i>
+              <input
+                class="block input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email"
+              />
+            </div>
+          </div>
+          <div>
+            <i class="icon fa-solid fa-lock"></i>
+
+            <input
+              class="block input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password"
+            />
+          </div>
           <button class="block btn" type="submit">Sign In</button>
         </form>
       </div>
